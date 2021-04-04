@@ -1,0 +1,40 @@
+begin
+
+    select count(s_rollno)  as "stud_above_threshQ1a" from insem where Q1a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ1b" from insem where Q1b > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ2a" from insem where Q2a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ2b" from insem where Q2b > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ3a" from insem where Q3a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ3b" from insem where Q3b > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ4a" from insem where Q4a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ4b" from insem where Q4b > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ5a" from insem where Q5a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ5b" from insem where Q5b > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ6a" from insem where Q6a > 2.5;
+    select count(s_rollno)  as "stud_above_threshQ6b" from insem where Q6b > 2.5;
+end
+
+
+
+Stud attempt ques
+
+begin
+
+    select count(s_rollno) as "stud_attemptQ1a" from insem where Q1a >=0;
+    select count(s_rollno)  as "stud_attemptQ1b" from insem where Q1b >=0;
+    select count(s_rollno)  as "stud_attemptQ2a" from insem where Q2a >=0;
+    select count(s_rollno)  as "stud_attemptQ2b" from insem where Q2b >=0;
+    select count(s_rollno)  as "stud_attemptQ3a" from insem where Q3a >=0;
+    select count(s_rollno)  as "stud_attemptQ3b" from insem where Q3b >=0;
+    select count(s_rollno)  as "stud_attemptQ4a" from insem where Q4a >=0;
+    select count(s_rollno)  as "stud_attemptQ4b" from insem where Q4b >=0;
+    select count(s_rollno)  as "stud_attemptQ5a" from insem where Q5a >=0;
+    select count(s_rollno)  as "stud_attemptQ5b" from insem where Q5b >=0;
+    select count(s_rollno) as "stud_attemptQ6a" from insem where Q6a >=0;
+    select count(s_rollno)  as "stud_attemptQ6b" from insem where Q6b >=0;
+    end
+
+
+
+
+    select(select count(s_rollno)  from insem where Q1a > 2.5;) / (select count(s_rollno) as "stud_attemptQ1a" from insem where Q1a >=0) * 100
